@@ -2,7 +2,7 @@ function firstNonRepeatedChar(str)
 {
 	var ReapeatedChar;
 	for(var i=0;i<str.length;i++){
-		for(j=0;j<str.length;j++){
+		for(var j=0;j<str.length;j++){
 			if(str[i]!=str[j]){
 				ReapeatedChar=str[j]
 			}else{
