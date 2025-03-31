@@ -1,17 +1,22 @@
-function firstNonRepeatedChar(str) 
+function firstNonRepeatedChar(str)
 {
-	var ReapeatedChar;
-	for(var i=0;i<str.length;i++){
-		for(var j=0;j<str.length;j++){
-			if(str[i]!=str[j]){
-				ReapeatedChar=str[j]
-			}else{
-				return null;
-			}
+	let map=new Map()
+	let char=null;
+	for(let i of str){
+		if(map.has(i)){
+			map.set(i,map.get(i)+1)
+		}else{
+			map.set(i,1)
 		}
 	}
-	return ReapeatedChar;
- // Write your code here
+	map.forEach((value,key)=>{
+		if(value==1){
+			char=key;
+			return char;
+		}
+			})
+	
+return char;		// Write your code here
 }
-// const input = prompt("Enter a string");
-// alert(firstNonRepeatedChar(input)); 
+const input = prompt("Enter a string");
+alert(firstNonRepeatedChar(input)); 
