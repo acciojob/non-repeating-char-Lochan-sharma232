@@ -1,6 +1,6 @@
 function firstNonRepeatedChar(str)
 {
-	let map=new Map()
+	let repeat=new Map()
 	let char=null;
 	for(let i of str){
 		if(map.has(i)){
@@ -18,5 +18,5 @@ function firstNonRepeatedChar(str)
 	
 return char;		// Write your code here
 }
-const input = prompt("Enter a string");
-alert(firstNonRepeatedChar(input)); 
+// const input = prompt("Enter a string");
+// alert(firstNonRepeatedChar(input)); 
