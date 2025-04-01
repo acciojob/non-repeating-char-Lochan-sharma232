@@ -1,6 +1,6 @@
 function firstNonRepeatedChar(str)
 {
-	let repeat=new Map()
+	let myMap=new Map()
 	let char=null;
 	for(let i of str){
 		if(map.has(i)){
